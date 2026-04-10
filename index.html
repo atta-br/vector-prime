@@ -4,433 +4,342 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Vector Prime — Liquidez Real para o Varejo</title>
-
-<!-- ================================================
-  LINKEDIN INSIGHT TAG — SUBSTITUA SEU_PARTNER_ID
-  Obtenha em: LinkedIn Campaign Manager > Assets > Insight Tag
-================================================ -->
-<script type="text/javascript">
-_linkedin_partner_id = "509203764";
-window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-</script>
-<script type="text/javascript">
-(function(l) {
-  if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
-  window.lintrk.q=[]}
-  var s = document.getElementsByTagName("script")[0];
-  var b = document.createElement("script");
-  b.type = "text/javascript";b.async = true;
-  b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-  s.parentNode.insertBefore(b, s);
-})(window.lintrk);
-</script>
-<noscript>
-<img height="1" width="1" style="display:none;" alt=""
-  src="https://px.ads.linkedin.com/collect/?pid=509203764&fmt=gif"/>
-</noscript>
-
 <style>
-  :root {
-    --bg: #07090f;
-    --bg2: #0d1117;
-    --bg3: #111826;
-    --border: rgba(255,255,255,0.07);
-    --accent: #3b82f6;
-    --accent2: #22d3a5;
-    --text: #f1f5f9;
-    --muted: #94a3b8;
-    --card: rgba(255,255,255,0.035);
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 18px 5%;
-    background: rgba(7,9,15,0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-  }
-  .logo { font-size: 1rem; font-weight: 700; letter-spacing: 0.05em; color: var(--text); }
-  .logo span { color: var(--accent2); }
-  .nav-tag {
-    font-size: 0.75rem; color: var(--muted);
-    border: 1px solid var(--border);
-    padding: 4px 12px; border-radius: 20px;
-  }
-
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: flex; flex-direction: column; justify-content: center;
-    padding: 120px 5% 80px;
-    position: relative; overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; top: -200px; right: -200px;
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero::after {
-    content: '';
-    position: absolute; bottom: -100px; left: -100px;
-    width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(34,211,165,0.07) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero-eyebrow {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--accent2);
-    margin-bottom: 24px;
-  }
-  .hero-eyebrow::before {
-    content: ''; display: block;
-    width: 24px; height: 2px; background: var(--accent2);
-  }
-  .hero h1 {
-    font-size: clamp(2rem, 4.5vw, 3.4rem);
-    font-weight: 800; line-height: 1.15;
-    letter-spacing: -0.02em;
-    max-width: 780px;
-    margin-bottom: 24px;
-  }
-  .hero h1 em {
-    font-style: normal;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  .hero-sub {
-    font-size: clamp(1rem, 1.8vw, 1.2rem);
-    color: var(--muted); max-width: 600px;
-    margin-bottom: 40px; line-height: 1.7;
-  }
-
-  /* PROBLEMS GRID */
-  .section { padding: 80px 5%; }
-  .section-label {
-    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--accent);
-    margin-bottom: 48px;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .section-label::after {
-    content: ''; flex: 1; height: 1px;
-    background: linear-gradient(90deg, var(--border), transparent);
-  }
-
-  .problems-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-  }
-  .problem-card {
-    background: var(--bg2);
-    padding: 36px 32px;
-  }
-  .problem-card h3 {
-    font-size: 0.95rem; font-weight: 700;
-    color: var(--text); margin-bottom: 20px;
-    line-height: 1.4;
-  }
-  .problem-card h3 strong { color: var(--accent); }
-  .problem-card ul { list-style: none; }
-  .problem-card ul li {
-    font-size: 0.88rem; color: var(--muted);
-    padding: 6px 0;
-    border-bottom: 1px solid var(--border);
-    display: flex; align-items: center; gap: 8px;
-  }
-  .problem-card ul li:last-child { border-bottom: none; }
-  .problem-card ul li::before {
-    content: ''; display: block; flex-shrink: 0;
-    width: 4px; height: 4px; border-radius: 50%;
-    background: var(--accent);
-    opacity: 0.6;
-  }
-
-  /* GAP FLOW */
-  .gap-section { padding: 80px 5%; background: var(--bg2); }
-  .gap-flow {
-    display: flex; align-items: center; justify-content: center;
-    flex-wrap: wrap; gap: 0;
-    max-width: 700px; margin: 0 auto;
-  }
-  .gap-step {
-    text-align: center; padding: 28px 32px;
-    flex: 1; min-width: 160px;
-  }
-  .gap-step .tool {
-    font-size: 0.8rem; font-weight: 700;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 8px;
-  }
-  .gap-step .action {
-    font-size: 0.9rem; color: var(--muted);
-  }
-  .gap-arrow {
-    font-size: 1.2rem; color: var(--border);
-    flex-shrink: 0; padding: 0 4px;
-  }
-  .gap-result {
-    text-align: center; margin-top: 40px;
-    padding: 24px; border-radius: 12px;
-    border: 1px dashed rgba(248,113,113,0.3);
-    background: rgba(248,113,113,0.04);
-    max-width: 500px; margin-left: auto; margin-right: auto;
-  }
-  .gap-result p {
-    font-size: 0.9rem; color: #fca5a5;
-    font-weight: 500;
-  }
-
-  /* SOLUTION */
-  .solution-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px; margin-top: 0;
-  }
-  .solution-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 32px 28px;
-    transition: border-color 0.2s;
-  }
-  .solution-card:hover { border-color: rgba(59,130,246,0.3); }
-  .solution-icon {
-    width: 40px; height: 40px;
-    background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(34,211,165,0.1));
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem; margin-bottom: 16px;
-  }
-  .solution-card h4 {
-    font-size: 0.95rem; font-weight: 700;
-    margin-bottom: 8px; color: var(--text);
-  }
-  .solution-card p {
-    font-size: 0.85rem; color: var(--muted); line-height: 1.6;
-  }
-
-  /* CTA SECTION */
-  .cta-section {
-    padding: 100px 5%;
-    text-align: center;
-    position: relative; overflow: hidden;
-  }
-  .cta-section::before {
-    content: '';
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-    width: 800px; height: 400px;
-    background: radial-gradient(ellipse, rgba(59,130,246,0.08) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .cta-section h2 {
-    font-size: clamp(1.6rem, 3vw, 2.4rem);
-    font-weight: 800; line-height: 1.2;
-    max-width: 640px; margin: 0 auto 20px;
-    letter-spacing: -0.02em;
-  }
-  .cta-section p {
-    font-size: 1rem; color: var(--muted);
-    max-width: 480px; margin: 0 auto 40px;
-  }
-
-  /* BUTTON */
-  .btn-cta {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: linear-gradient(135deg, var(--accent), #2563eb);
-    color: #fff; font-size: 1rem; font-weight: 700;
-    padding: 16px 36px; border-radius: 8px;
-    text-decoration: none;
-    box-shadow: 0 0 32px rgba(59,130,246,0.3);
-    transition: transform 0.15s, box-shadow 0.15s;
-    cursor: pointer;
-  }
-  .btn-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 48px rgba(59,130,246,0.45);
-  }
-  .btn-cta svg { width: 18px; height: 18px; flex-shrink: 0; }
-  .cta-note {
-    margin-top: 16px; font-size: 0.8rem; color: var(--muted);
-  }
-
-  /* FOOTER */
-  footer {
-    padding: 32px 5%;
-    border-top: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 12px;
-  }
-  footer p { font-size: 0.8rem; color: var(--muted); }
-
-  @media (max-width: 600px) {
-    .gap-arrow { display: none; }
-    .gap-flow { flex-direction: column; }
-    nav { padding: 14px 5%; }
-  }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#f4f5f7;color:#0f172a;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 6%;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid #e2e8f0}
+.logo{font-size:0.95rem;font-weight:800;color:#0f172a;letter-spacing:0.02em}
+.logo span{color:#1d4ed8}
+.logo-divider{color:#cbd5e1;margin:0 6px}
+.hero{background:#fff;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.hero-left{padding:130px 8% 80px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid #f1f5f9}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#1d4ed8;margin-bottom:28px}
+.eyebrow-line{width:28px;height:2px;background:#1d4ed8;display:block;flex-shrink:0}
+.hero h1{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800;line-height:1.18;letter-spacing:-0.025em;margin-bottom:24px;color:#0f172a}
+.hero h1 em{font-style:normal;color:#1d4ed8}
+.hero-sub{font-size:1rem;color:#475569;margin-bottom:40px;line-height:1.75;max-width:480px}
+.hero-right{background:#f8fafc;display:flex;align-items:center;justify-content:center;padding:60px 8%;position:relative;overflow:hidden}
+.hero-right::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#1d4ed8,#3b82f6,#60a5fa)}
+.hero-photo-wrap{position:relative;width:100%;height:100%;min-height:520px}
+.hero-photo{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
+.hero-badge-liq{position:absolute;bottom:32px;left:32px;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;box-shadow:0 4px 20px rgba(0,0,0,0.1)}
+.hero-badge-liq .lbl{font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#94a3b8;margin-bottom:4px}
+.hero-badge-liq .val{font-size:1.05rem;font-weight:800;color:#059669}
+.hero-badge-liq .sub{font-size:0.68rem;font-weight:700;color:#059669;background:#ecfdf5;padding:2px 8px;border-radius:4px;display:inline-block;margin-top:4px}
+.hero-badge-b3{position:absolute;bottom:32px;right:32px;background:#1d4ed8;border-radius:10px;padding:10px 16px}
+.hero-badge-b3 .b3l{font-size:0.62rem;color:rgba(255,255,255,0.7);font-weight:600}
+.hero-badge-b3 .b3v{font-size:0.8rem;font-weight:800;color:#fff}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:#1d4ed8;color:#fff;font-size:0.9rem;font-weight:700;padding:15px 32px;border-radius:6px;text-decoration:none;letter-spacing:0.01em;transition:background .15s,transform .15s}
+.btn-primary:hover{background:#1e40af;transform:translateY(-1px)}
+.btn-primary svg,.btn-outline-white svg{width:16px;height:16px;flex-shrink:0}
+.btn-outline-white{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#fff;font-size:0.9rem;font-weight:700;padding:15px 32px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,0.5);letter-spacing:0.01em;transition:background .15s,border-color .15s}
+.btn-outline-white:hover{background:rgba(255,255,255,0.1);border-color:#fff}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-right{min-height:380px}.hero-left{padding:110px 6% 60px}.hero-badge-liq,.hero-badge-b3{right:4px}}
+.section{padding:88px 6%}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-eyebrow{font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#1d4ed8;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-eyebrow::before{content:'';display:block;width:20px;height:2px;background:#1d4ed8;flex-shrink:0}
+.section-title{font-size:clamp(1.5rem,2.8vw,2rem);font-weight:800;letter-spacing:-0.02em;color:#0f172a;margin-bottom:52px;max-width:560px;line-height:1.25}
+.problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:#e2e8f0;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.problem-card{background:#fff;transition:background .2s}
+.problem-card:hover{background:#f8fafc}
+.prob-img-wrap{position:relative;height:210px;overflow:hidden}
+.prob-img{width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block;transition:transform .4s}
+.problem-card:hover .prob-img{transform:scale(1.04)}
+.prob-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 45%,rgba(15,23,42,0.6))}
+.prob-badge{position:absolute;bottom:12px;left:16px;color:#fff;font-size:0.68rem;font-weight:700;padding:4px 10px;border-radius:5px}
+.prob-badge.red{background:rgba(220,38,38,0.9)}
+.prob-badge.blue{background:rgba(29,78,216,0.9)}
+.prob-body{padding:28px 28px 32px}
+.prob-body h3{font-size:0.95rem;font-weight:700;color:#0f172a;margin-bottom:14px;line-height:1.4}
+.prob-body ul{list-style:none}
+.prob-body ul li{font-size:0.85rem;color:#64748b;padding:7px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:10px}
+.prob-body ul li:last-child{border-bottom:none}
+.prob-body ul li::before{content:'';display:block;flex-shrink:0;width:5px;height:5px;border-radius:50%;background:#94a3b8}
+.gap-section{background:#0f172a;padding:88px 6%}
+.gap-section .section-eyebrow{color:#60a5fa}
+.gap-section .section-eyebrow::before{background:#60a5fa}
+.gap-section .section-title{color:#f8fafc;margin-bottom:52px}
+.gap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#1e293b;border:1px solid #1e293b;border-radius:12px;overflow:hidden;max-width:860px;margin:0 auto 40px}
+.gap-step{background:#0f172a;padding:36px 24px;text-align:center}
+.gap-icon{width:88px;height:88px;border-radius:50%;background:#1e293b;border:2px solid #3b82f6;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.gap-tool{font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#60a5fa;margin-bottom:6px}
+.gap-action{font-size:0.85rem;color:#94a3b8}
+.gap-result{max-width:640px;margin:0 auto;background:#1e293b;border:1px solid #334155;border-radius:10px;padding:20px 28px;display:flex;align-items:center;gap:16px}
+.gap-result p{font-size:0.88rem;color:#94a3b8;font-weight:500;line-height:1.6}
+@media(max-width:600px){.gap-grid{grid-template-columns:1fr}}
+.solution-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.solution-card{background:#fff;border-radius:10px;overflow:hidden;border:1px solid #e2e8f0;position:relative;transition:box-shadow .2s,transform .2s}
+.solution-card:hover{box-shadow:0 8px 32px rgba(29,78,216,0.09);transform:translateY(-2px)}
+.solution-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:#1d4ed8;z-index:1}
+.sol-img-wrap{height:210px;overflow:hidden;position:relative}
+.sol-img-wrap::after{content:'';position:absolute;bottom:0;left:0;right:0;height:56px;background:linear-gradient(transparent,#fff)}
+.sol-img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;transition:transform .4s}
+.solution-card:hover .sol-img{transform:scale(1.04)}
+.sol-body{padding:22px 28px 30px}
+.sol-body h4{font-size:0.95rem;font-weight:700;color:#0f172a;margin-bottom:10px}
+.sol-body p{font-size:0.85rem;color:#64748b;line-height:1.7}
+.sol-tag{display:inline-block;margin-top:14px;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#1d4ed8;background:#eff6ff;padding:4px 12px;border-radius:4px}
+.cta-section{background:#0f172a;padding:100px 6%;text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1d4ed8,#3b82f6,#60a5fa)}
+.cta-inner{position:relative;z-index:1}
+.cta-eyebrow{font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#60a5fa;margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:10px}
+.cta-eyebrow::before,.cta-eyebrow::after{content:'';display:block;width:20px;height:1px;background:#60a5fa}
+.cta-section h2{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;color:#f8fafc;letter-spacing:-0.02em;line-height:1.2;max-width:600px;margin:0 auto 16px}
+.cta-desc{font-size:0.95rem;color:#94a3b8;max-width:460px;margin:0 auto 44px;line-height:1.7}
+.cta-note{margin-top:24px;font-size:0.75rem;color:#475569}
+.cta-avatars{display:flex;align-items:center;justify-content:center;margin-bottom:44px}
+.cta-av{width:76px;height:76px;border-radius:50%;overflow:hidden;border:3px solid #0f172a;outline:2px solid #1d4ed8;margin:0 -8px}
+.cta-av img{width:100%;height:100%;object-fit:cover;object-position:center 10%}
+.cta-icon{width:52px;height:52px;border-radius:50%;background:#1d4ed8;display:flex;align-items:center;justify-content:center;margin:0 14px;flex-shrink:0;z-index:2}
+footer{padding:28px 6%;background:#fff;border-top:1px solid #e2e8f0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer p{font-size:0.78rem;color:#94a3b8}
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">ATTA <span>· Vector Prime</span></div>
-
+  <div class="logo">ATTA <span class="logo-divider">·</span> <span>Vector Prime</span></div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-
-  <h1>ERP e conciliadores não mostram a <em>liquidez real</em> da empresa</h1>
-  <p class="hero-sub">
-    Qual é a liquidez real da empresa agora? Hoje a maioria das empresas já possui ERP implantado, conciliador — e ainda depende de planilhas manuais para responder essa pergunta.
-  </p>
-  <div>
-    <a href="https://atta-brcom.pipedrive.com/scheduler/4xQrM3TP/conversa-com-especialista"
-       class="btn-cta" id="cta-hero" target="_blank" rel="noopener"
-       onclick="trackConversion()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-      </svg>
+  <div class="hero-left">
+    <span class="hero-eyebrow"><span class="eyebrow-line"></span>Vector Prime</span>
+    <h1>ERP e conciliadores não mostram a <em>liquidez real</em> da empresa</h1>
+    <p class="hero-sub">Qual é a liquidez real da empresa agora? Hoje a maioria das empresas já possui ERP implantado, conciliador — e ainda depende de planilhas manuais para responder essa pergunta.</p>
+    <a href="https://atta-brcom.pipedrive.com/scheduler/4xQrM3TP/conversa-com-especialista" class="btn-primary" id="cta-hero" target="_blank" rel="noopener" onclick="trackConversion()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
       Falar com especialista
     </a>
+  </div>
+  <div class="hero-right" style="padding:0;overflow:hidden">
+    <div class="hero-photo-wrap">
+      <img class="hero-photo"
+        src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=900&h=900&fit=crop&crop=faces,top"
+        alt="Executivo CFO analisando dados de liquidez"/>
+      <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(15,23,42,0.82);backdrop-filter:blur(6px);padding:18px 32px;display:flex;align-items:center;justify-content:center;gap:14px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        <span style="font-size:0.78rem;font-weight:600;color:rgba(255,255,255,0.7);letter-spacing:0.06em;text-transform:uppercase">Integrado com</span>
+        <span style="font-size:0.95rem;font-weight:800;color:#fff;letter-spacing:0.02em">Adquirentes + B3 — Bolsa de Valores</span>
+        <span style="background:#34d399;color:#064e3b;font-size:0.68rem;font-weight:800;padding:3px 10px;border-radius:20px;letter-spacing:0.06em;text-transform:uppercase">Ativo</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- PROBLEMAS -->
-<section class="section">
-  <div class="section-label">O problema</div>
-  <div class="problems-grid">
+<section class="section" style="background:#f4f5f7">
+  <div class="section-inner">
+    <div class="section-eyebrow">O problema</div>
+    <h2 class="section-title">Por que ERP e conciliador não são suficientes</h2>
+    <div class="problem-grid">
 
-    <div class="problem-card">
-      <h3><strong>Impacto financeiro direto</strong> da falta de visão clara</h3>
-      <ul>
-        <li>Decisões distorcidas de caixa</li>
-        <li>Risco de liquidez</li>
-        <li>Ineficiência operacional</li>
-      </ul>
+      <div class="problem-card">
+        <div class="prob-img-wrap">
+          <!-- Mulher executiva preocupada — Unsplash, Christina Wocintechchat -->
+          <img class="prob-img"
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=420&fit=crop&crop=faces,top"
+            alt="Executiva analisando queda nos resultados"/>
+          <div class="prob-overlay"></div>
+          <span class="prob-badge red">−18% liquidez</span>
+        </div>
+        <div class="prob-body">
+          <h3>Impacto financeiro direto da falta de visão clara</h3>
+          <ul>
+            <li>Decisões distorcidas de caixa</li>
+            <li>Risco de liquidez</li>
+            <li>Ineficiência operacional</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="prob-img-wrap">
+          <!-- Homem analista olhando tela — Unsplash, Tim Gouw -->
+          <img class="prob-img"
+            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=420&fit=crop&crop=top"
+            alt="Analista frustrado com sistemas desconectados"/>
+          <div class="prob-overlay"></div>
+          <span class="prob-badge blue">ERP ≠ Liquidez</span>
+        </div>
+        <div class="prob-body">
+          <h3>O ERP atende o contábil, não a liquidez</h3>
+          <ul>
+            <li>Vendas e faturamento</li>
+            <li>Contas a receber</li>
+            <li>Taxas, chargebacks e ajustes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="prob-img-wrap">
+          <!-- Mulher analisando documentos — Unsplash, Jeshoots -->
+          <img class="prob-img"
+            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&h=420&fit=crop&crop=faces,top"
+            alt="Gestora buscando dados ocultos em relatórios"/>
+          <div class="prob-overlay"></div>
+          <span class="prob-badge blue">Dados ocultos</span>
+        </div>
+        <div class="prob-body">
+          <h3>O conciliador não revela</h3>
+          <ul>
+            <li>Custo efetivo de antecipação</li>
+            <li>Cessões e gravames nas registradoras</li>
+            <li>Perdas ao longo da cadeia</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
-
-    <div class="problem-card">
-      <h3>O ERP <strong>atende o contábil</strong>, não a liquidez</h3>
-      <ul>
-        <li>Vendas e faturamento</li>
-        <li>Contas a receber</li>
-        <li>Contabilidade</li>
-        <li>Taxas, chargebacks, cancelamentos e ajustes</li>
-      </ul>
-    </div>
-
-    <div class="problem-card">
-      <h3>O conciliador <strong>não revela</strong></h3>
-      <ul>
-        <li>Visão clara da liquidez</li>
-        <li>Custo efetivo de antecipação</li>
-        <li>Cessões e gravames nas registradoras</li>
-        <li>Perdas ao longo da cadeia</li>
-      </ul>
-    </div>
-
   </div>
 </section>
 
 <!-- GAP DA LIQUIDEZ -->
 <section class="gap-section">
-  <div class="section-label" style="padding: 0 0 0 0; max-width:1200px; margin:0 auto 40px;">A lacuna da liquidez</div>
-  <div class="gap-flow">
-    <div class="gap-step">
-      <div class="tool">ERP</div>
-      <div class="action">Registra vendas</div>
+  <div class="section-inner">
+    <div class="section-eyebrow">A lacuna da liquidez</div>
+    <h2 class="section-title">O que acontece na prática</h2>
+    <div class="gap-grid">
+
+      <div class="gap-step">
+        <div class="gap-icon">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/><path d="M7 8h2m2 0h2m2 0h2"/><path d="M7 11h2m2 0h2"/>
+          </svg>
+        </div>
+        <div class="gap-tool">ERP</div>
+        <div class="gap-action">Registra vendas</div>
+      </div>
+
+      <div class="gap-step">
+        <div class="gap-icon">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+          </svg>
+        </div>
+        <div class="gap-tool">Conciliador</div>
+        <div class="gap-action">Verifica</div>
+      </div>
+
+      <div class="gap-step">
+        <div class="gap-icon">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 9v9M15 9v9"/>
+          </svg>
+        </div>
+        <div class="gap-tool">Planilhas</div>
+        <div class="gap-action">Tentam explicar a liquidez</div>
+      </div>
+
     </div>
-    <div class="gap-arrow">↓</div>
-    <div class="gap-step">
-      <div class="tool">Conciliador</div>
-      <div class="action">Verifica</div>
+    <div class="gap-result">
+      <span style="flex-shrink:0">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </span>
+      <p>Nenhuma dessas ferramentas, isoladas ou combinadas, revela a liquidez real — e as decisões de caixa ficam comprometidas.</p>
     </div>
-    <div class="gap-arrow">↓</div>
-    <div class="gap-step">
-      <div class="tool">Planilhas</div>
-      <div class="action">Tentam explicar a liquidez</div>
-    </div>
-  </div>
-  <div class="gap-result">
-    <p>⚠ Nenhuma dessas ferramentas, isoladas ou combinadas, revela a liquidez real — e as decisões de caixa ficam comprometidas.</p>
   </div>
 </section>
 
 <!-- SOLUÇÃO -->
-<section class="section">
-  <div class="section-label">Como o Vector Prime resolve</div>
-  <div class="solution-grid">
-    <div class="solution-card">
-      <div class="solution-icon">⚡</div>
-      <h4>Camada de consolidação da liquidez</h4>
-      <p>Uma visão única e em tempo real de toda a cadeia financeira — do faturamento ao caixa disponível.</p>
-    </div>
-    <div class="solution-card">
-      <div class="solution-icon">🔗</div>
-      <h4>Integra adquirentes e B3</h4>
-      <p>Conecta automaticamente suas adquirentes, registradoras e dados da B3 para revelar o que o ERP e o conciliador não mostram.</p>
-    </div>
-    <div class="solution-card">
-      <div class="solution-icon">🚀</div>
-      <h4>Implantação rápida</h4>
-      <p>Até 5 dias para você ter visão completa da liquidez real da empresa, sem grandes projetos de TI.</p>
+<section class="section" style="background:#fff">
+  <div class="section-inner">
+    <div class="section-eyebrow">Como o Vector Prime resolve</div>
+    <h2 class="section-title">Uma camada que conecta tudo</h2>
+    <div class="solution-grid">
+
+      <div class="solution-card">
+        <div class="sol-img-wrap">
+          <!-- Homem e mulher trabalhando juntos — Unsplash, Mapbox -->
+          <img class="sol-img"
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=560&h=420&fit=crop&crop=top"
+            alt="Executivos revisando dashboard financeiro juntos"/>
+        </div>
+        <div class="sol-body">
+          <h4>Camada de consolidação da liquidez</h4>
+          <p>Uma visão única e em tempo real de toda a cadeia financeira — do faturamento ao caixa disponível.</p>
+          <span class="sol-tag">Visão unificada</span>
+        </div>
+      </div>
+
+      <div class="solution-card">
+        <div class="sol-img-wrap">
+          <!-- Mulher executiva confiante com tablet — Unsplash, Amy Hirschi -->
+          <img class="sol-img"
+            src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=560&h=420&fit=crop&crop=faces,top"
+            alt="Executiva com visão integrada de dados financeiros"/>
+        </div>
+        <div class="sol-body">
+          <h4>Integra adquirentes e B3</h4>
+          <p>Conecta automaticamente suas adquirentes, registradoras e dados da B3 para revelar o que o ERP e o conciliador não mostram.</p>
+          <span class="sol-tag">Integração automática</span>
+        </div>
+      </div>
+
+      <div class="solution-card">
+        <div class="sol-img-wrap">
+          <!-- Equipe em reunião — Unsplash, Brooke Cagle -->
+          <img class="sol-img"
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=560&h=420&fit=crop&crop=top"
+            alt="Equipe celebrando implantação rápida"/>
+        </div>
+        <div class="sol-body">
+          <h4>Implantação rápida</h4>
+          <p>Até 5 dias para você ter visão completa da liquidez real da empresa, sem grandes projetos de TI.</p>
+          <span class="sol-tag">Pronto em 5 dias</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- CTA FINAL -->
 <section class="cta-section">
-  <h2>Avalie se sua liquidez está sendo distorcida</h2>
-  <p>Mapeamos rapidamente onde essas distorções impactam sua liquidez — fatores que ERP e conciliadores não capturam.</p>
-  <a href="https://atta-brcom.pipedrive.com/scheduler/4xQrM3TP/conversa-com-especialista"
-     class="btn-cta" id="cta-final" target="_blank" rel="noopener"
-     onclick="trackConversion()">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-      <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-    </svg>
-    Falar com especialista
-  </a>
-  <p class="cta-note">Sem compromisso · Agenda diretamente com um especialista ATTA</p>
+  <div class="cta-inner">
+    <div class="cta-avatars">
+      <div class="cta-av-icon" style="width:72px;height:72px;border-radius:50%;background:#1e293b;border:2px solid #3b82f6;display:flex;align-items:center;justify-content:center;margin:0 8px">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+        </svg>
+      </div>
+      <div class="cta-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      </div>
+      <div class="cta-av-icon" style="width:72px;height:72px;border-radius:50%;background:#1e293b;border:2px solid #3b82f6;display:flex;align-items:center;justify-content:center;margin:0 8px">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+        </svg>
+      </div>
+    </div>
+    <div class="cta-eyebrow">Próximo passo</div>
+    <h2>Avalie se sua liquidez está sendo distorcida</h2>
+    <p class="cta-desc">Mapeamos rapidamente onde essas distorções impactam sua liquidez — fatores que ERP e conciliadores não capturam.</p>
+    <a href="https://atta-brcom.pipedrive.com/scheduler/4xQrM3TP/conversa-com-especialista" class="btn-outline-white" id="cta-final" target="_blank" rel="noopener" onclick="trackConversion()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+      Falar com especialista
+    </a>
+    <p class="cta-note">Sem compromisso · Agenda diretamente com um especialista ATTA</p>
+  </div>
 </section>
 
 <footer>
   <p>© 2026 ATTA · Vector Prime</p>
-  <p style="font-size:0.75rem; color: #475569;">Solução financeira para Varejo e Ecommerce</p>
+  <p>Solução financeira para Varejo e Ecommerce</p>
 </footer>
 
-<!-- ================================================
-  LINKEDIN CONVERSION EVENT
-  Substitua SEU_CONVERSION_ID pelo ID gerado no
-  LinkedIn Campaign Manager > Assets > Conversions
-================================================ -->
 <script>
-function trackConversion() {
-  if (typeof window.lintrk === 'function') {
-    window.lintrk('track', { conversion_id: 27021025 });
-  }
+function trackConversion(){
+  if(typeof window.lintrk==='function'){window.lintrk('track',{conversion_id:27021025})}
 }
 </script>
-
 </body>
 </html>
